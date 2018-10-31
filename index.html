@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瀑布流</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #wrap {
+            width: 1000px;
+            margin: auto;
+            -webkit-column-width: 100px;
+            /*每一列最小的宽度*/
+            -webkit-column-count: 4;
+        }
+        
+        #wrap img {
+            width: 100%;
+            display: block;
+        }
+        
+        #count {
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="count">
+        <input type="text" id="num" placeholder="请输入栏目数">
+        <button id="btn">css3瀑布流</button>
+
+    </div>
+    <div id="wrap">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+        <img src="img/6.jpg">
+        <img src="img/7.jpg">
+        <img src="img/8.jpg">
+        <img src="img/9.jpg">
+        <img src="img/10.jpg">
+
+    </div>
+    <script>
+        var num = document.getElementById("num");
+        var btn = document.getElementById("btn");
+        var wrap = document.getElementById("wrap");
+        btn.onclick = function() {
+            wrap.style.webkitColumnCount = num.value;
+        }
+    </script>
+</body>
+
+</html>
